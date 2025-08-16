@@ -23,7 +23,7 @@ export function ProfileSection() {
           </div>
           <div className="flex items-center gap-1">
             <MapPin className="h-3 w-3" />
-            <span>Sunnyvale, CA</span>
+            <span>Mountain View, CA</span>
           </div>
           <div className="flex items-center gap-1">
             <Button variant="ghost" size="sm" className="h-6 w-6 p-0" asChild>
