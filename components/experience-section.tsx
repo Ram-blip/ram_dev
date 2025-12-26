@@ -38,38 +38,49 @@ export function ExperienceSection() {
   ]
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div className="md:col-span-1">
-        <h2 className="text-2xl font-bold text-foreground">Experience</h2>
-      </div>
-      <div className="md:col-span-3">
-        <div className="space-y-6">
+    <section
+      id="experience"
+      className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60"
+    >
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
+        <div className="space-y-2">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+            Experience
+          </p>
+        </div>
+
+        <div className="divide-y divide-border/60">
           {experiences.map((exp, index) => (
-            <Card key={index} className="p-6">
-              <CardContent className="p-0">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <img
-                      src={exp.logo || "/placeholder.svg"}
-                      alt={`${exp.company} logo`}
-                      className="w-12 h-12 rounded-lg object-cover"
-                    />
+            <Card
+              key={index}
+              className="rounded-none border-0 bg-transparent shadow-none"
+            >
+              <CardContent className="flex flex-col gap-3 px-0 py-4 md:flex-row md:items-start md:gap-5">
+                <div className="flex items-center gap-3 md:w-44">
+                  <img
+                    src={exp.logo || "/placeholder.svg"}
+                    alt={`${exp.company} logo`}
+                    className="h-10 w-10 rounded-lg object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">
+                      {exp.company}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {exp.period}
+                    </p>
                   </div>
-                  <div className="flex-1 space-y-2">
-                    <div>
-                      <h3 className="font-semibold text-foreground">{exp.title}</h3>
-                      <p className="text-muted-foreground">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground">{exp.period}</p>
-                    </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      {exp.responsibilities.map((responsibility, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-foreground mt-1.5 w-1 h-1 bg-current rounded-full flex-shrink-0" />
-                          {responsibility}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                </div>
+
+                <div className="flex-1 space-y-2">
+                  <p className="text-sm font-semibold text-foreground">
+                    {exp.title}
+                  </p>
+                  <ul className="list-disc space-y-2 pl-4 text-sm text-muted-foreground">
+                    {exp.responsibilities.map((responsibility, idx) => (
+                      <li key={idx}>{responsibility}</li>
+                    ))}
+                  </ul>
                 </div>
               </CardContent>
             </Card>

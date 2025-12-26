@@ -1,36 +1,38 @@
 
 
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-
 export function AboutSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div className="md:col-span-1">
-        <h2 className="text-2xl font-bold text-foreground">About</h2>
-      </div>
-      <div className="md:col-span-3 space-y-4 text-muted-foreground leading-relaxed">
-        <p>
-          Hi there, I&apos;m Ram — a Software Engineer with a Master&apos;s in Computer Engineering from UC Riverside. I enjoy
-          bringing ideas to life through software development and find energy in solving complex problems, especially
-          the satisfaction of debugging and fixing my own mistakes. Recently, I built a secure password-sharing platform
-          using Next.js, Node.js, Express, and Redis, reflecting my interest in building scalable and reliable systems.
-        </p>
-        <p>
-          Outside of coding, I enjoy reading, long walks, and traveling. I&apos;m currently seeking new grad SDE
-          opportunities where I can build scalable solutions and contribute fully to the Product and the team. Feel free
-          to reach me at{" "}
-          <a href="mailto:rkone003@ucr.edu" className="text-foreground underline hover:no-underline">
-            rkone003@ucr.edu
-          </a>
-          .
-        </p>
-        <div className="pt-2">
-          <Button variant="outline" size="sm" asChild>
-            <Link href="/resume.pdf" target="_blank">
-              View Resume
-            </Link>
-          </Button>
+    <section
+      id="about"
+      className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60"
+    >
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
+        <div className="space-y-2">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+            About
+          </p>
+        </div>
+
+        <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+          <p>
+            I’m Ram — a software engineer who got pulled into tech the same way a lot of us got pulled into games: curiosity first, obsession second. It started back in the GTA: Vice City days, when I wasn’t just playing, I was wondering how the world on the screen even worked. That curiosity quietly turned into building things: HTML, CSS, JavaScript… then bigger projects, real systems, real users, real bugs.
+          </p>
+          <p>
+            I like building systems that scale. I also like debugging. Not the pain. The payoff. I find the root cause and fix it cleanly. Lately I’ve been diving into distributed systems. I recently read{" "}
+            <em>The Google File System</em>. It reminded me that failures are normal.
+          </p>
+          <p>
+            When I’m not coding, I’m either gaming or learning something technical. Bikes, cars, and audio gear keep my attention. That includes headphones, amps, and DACs. I prefer specs over hype. Power, impedance, and clean output matter. </p>
+            <p>
+              Want to build something real? I’m open to early-career SDE roles. Feel free to reach me at{" "}
+            <a
+              href="mailto:ramsundar.konety@gmail.com"
+              className="text-foreground underline hover:no-underline"
+            >
+              ramsundar.konety@gmail.com
+            </a>
+            .
+          </p>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 
@@ -7,31 +8,34 @@ export function ProjectsSection() {
       title: "GitShare",
       subtitle: "Easily share your private GitHub repositories",
       description:
-        "Built with NextJS, Django, PostgreSQL and self hosted using Docker.",
+        "GitShare is a self-hosted platform to securely share private GitHub repositories. Built using NextJS, Django, PostgreSQL, and Docker for efficient deployment and scalability",
       image: "/Project1.png",
       githubUrl: "https://github.com",
+      liveUrl: "https://example.com/gitshare",
     },
     {
       title: "SafeStash",
       subtitle: "Encode London Hackathon 2024 Bounty Winner",
       description:
-        "Built with NextJS, Flask, Supbase, utilizing Mobile Money APIs and Stellar's network.",
+        "SafeStash is a hackathon-winning app for secure mobile money management using Stellar’s blockchain. Built with NextJS, Flask, and Supabase, it integrates Mobile Money APIs for seamless transactions.",
       image: "/Project2.png",
       githubUrl: "https://github.com",
+      liveUrl: "https://example.com/safestash",
     },
     {
       title: "TaskFlow",
       subtitle: "AI-powered project management platform",
       description:
-        "Built with React, Node.js, MongoDB, and OpenAI API for intelligent task prioritization.",
+        "TaskFlow is an AI-driven project management tool that intelligently prioritizes and organizes tasks. Built using React, Node.js, MongoDB, and OpenAI API for smart and efficient workflow handling.",
       image: "/Project3.png",
       githubUrl: "https://github.com",
+      liveUrl: "https://example.com/taskflow",
     },
     {
       title: "EcoTracker",
       subtitle: "Carbon footprint monitoring mobile app",
       description:
-        "Developed using React Native, Firebase, and Google Maps API with real-time analytics.",
+        "EcoTracker is a mobile app to track and analyze your carbon footprint in real time. Developed with React Native, Firebase, and Google Maps API for live environmental insights.",
       image: "/Project4.png",
       githubUrl: "https://github.com",
     },
@@ -39,57 +43,66 @@ export function ProjectsSection() {
       title: "CryptoSentinel",
       subtitle: "Blockchain security analysis tool",
       description:
-        "Built with Python, FastAPI, PostgreSQL, and Web3.py for smart contract vulnerability detection.",
+        "CryptoSentinel is a blockchain security tool for analyzing and detecting smart contract vulnerabilities. Built with Python, FastAPI, PostgreSQL, and Web3.py for fast, secure contract auditing.",
       image: "/Project5.png",
       githubUrl: "https://github.com",
     },
   ]
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-4 gap-3">
-      {/* Left column title */}
-      <div className="md:col-span-1">
-        <h2 className="text-lg font-bold text-foreground">Projects</h2>
-      </div>
-
-      {/* Right column stacked cards */}
-      <div className="md:col-span-3">
+    <section
+      id="projects"
+      className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60"
+    >
+      <div className="space-y-6">
         <div className="space-y-2">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+            Projects
+          </p>
+        </div>
+
+        <div className="divide-y divide-border/60">
           {projects.map((project, index) => (
-            <Link
+            <Card
               key={index}
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-              aria-label={`${project.title} repository`}
+              className="rounded-none border-0 bg-transparent shadow-none"
             >
-              <Card className="overflow-hidden rounded-md border border-border/50 bg-card shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5">
-                {/* Even smaller image height */}
-                <div className="w-full flex items-center justify-center bg-card/40">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="block w-full max-h-20 md:max-h-24 object-contain"
-                  />
-                </div>
-
-                <CardContent className="px-3 pt-1 pb-2">
-                  {/* Title – Subtitle inline */}
-                  <h3 className="font-semibold text-lg text-foreground">
+              <CardContent className="flex flex-col gap-3 px-0 py-3 md:flex-row md:items-center md:gap-5">
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                    {project.subtitle}
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">
                     {project.title}
-                    <span className="ml-2 text-base font-normal text-muted-foreground">
-                      – {project.subtitle}
-                    </span>
                   </h3>
-
-                  {/* Description */}
-                  <p className="mt-1 text-sm text-muted-foreground leading-snug">
+                  <p className="text-sm text-muted-foreground">
                     {project.description}
                   </p>
-                </CardContent>
-              </Card>
-            </Link>
+                </div>
+                <div className="flex flex-wrap items-center gap-2 md:justify-end">
+                  {project.liveUrl && (
+                    <Button asChild size="sm">
+                      <Link
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Live
+                      </Link>
+                    </Button>
+                  )}
+                  <Button asChild size="sm" variant="secondary">
+                    <Link
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

@@ -38,10 +38,15 @@ const satoshi = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Ramsundar Konety Govindarajan - Software Developer",
+  title: "Ram | Software Developer",
   description:
     "Portfolio of Ramsundar Konety Govindarajan, Computer Science and Electronics student at University of Bristol",
   generator: "v0.app",
+  icons: {
+    icon: [{ url: "/favicon.svg" }],
+    apple: [{ url: "/favicon.svg" }],
+  },
+  manifest: "/manifest.webmanifest",
 }
 
 export default function RootLayout({

@@ -23,48 +23,66 @@ export function EducationSection() {
   ]
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div className="md:col-span-1">
-        <h2 className="text-2xl font-bold text-foreground">Education</h2>
-      </div>
-      <div className="md:col-span-3">
-        <div className="space-y-6">
+    <section
+      id="education"
+      className="rounded-3xl border border-border/50 bg-card/70 p-4 md:p-7 dark:border-border/60"
+    >
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
+        <div className="space-y-2">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+            Education
+          </p>
+        </div>
+
+        <div className="divide-y divide-border/60">
           {educationEntries.map((edu, index) => (
-            <Card key={index} className="p-6">
-              <CardContent className="p-0">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <img
-                      src={edu.logo || "/placeholder.svg"}
-                      alt={`${edu.institution} logo`}
-                      className="w-12 h-12 rounded-lg object-cover"
-                    />
+            <Card
+              key={index}
+              className="rounded-none border-0 bg-transparent shadow-none"
+            >
+              <CardContent className="flex flex-col gap-2 px-0 py-2 md:flex-row md:items-start md:gap-3">
+                <div className="flex items-center gap-2 md:w-44">
+                  <img
+                    src={edu.logo || "/placeholder.svg"}
+                    alt={`${edu.institution} logo`}
+                    className="h-9 w-9 rounded-lg object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">
+                      {edu.institution}
+                    </p>
+                    <p className="text-xs text-muted-foreground">{edu.period}</p>
                   </div>
-                  <div className="flex-1 space-y-2">
-                    <div>
-                      <h3 className="font-semibold text-foreground">{edu.institution}</h3>
-                      <p className="text-muted-foreground">{edu.degree}</p>
-                      <p className="text-sm text-muted-foreground">{edu.period}</p>
-                    </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      {edu.description && (
-                        <li className="flex items-start gap-2">
-                          <span className="text-foreground mt-1.5 w-1 h-1 bg-current rounded-full flex-shrink-0" />
-                          {edu.description}
-                        </li>
-                      )}
-                      <li className="flex items-start gap-2">
-                        <span className="text-foreground mt-1.5 w-1 h-1 bg-current rounded-full flex-shrink-0" />
-                        Overall GPA: <span className="font-medium">{edu.grade}</span>
+                </div>
+
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-semibold text-foreground">
+                    {edu.degree}
+                  </p>
+                  <ul className="list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                    {index === 0 && (
+                      <li>
+                        Overall GPA:{" "}
+                        <span className="font-medium text-foreground">
+                          {edu.grade}
+                        </span>
                       </li>
-                      {edu.coursework && (
-                        <li className="flex items-start gap-2">
-                          <span className="text-foreground mt-1.5 w-1 h-1 bg-current rounded-full flex-shrink-0" />
-                          Relevant Coursework: {edu.coursework}
-                        </li>
-                      )}
-                    </ul>
-                  </div>
+                    )}
+                    {edu.description && (
+                      <li>{edu.description}</li>
+                    )}
+                    {index !== 0 && (
+                      <li>
+                        Overall GPA:{" "}
+                        <span className="font-medium text-foreground">
+                          {edu.grade}
+                        </span>
+                      </li>
+                    )}
+                    {edu.coursework && (
+                      <li>Relevant Coursework: {edu.coursework}</li>
+                    )}
+                  </ul>
                 </div>
               </CardContent>
             </Card>

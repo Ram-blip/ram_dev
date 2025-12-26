@@ -1,42 +1,58 @@
-import { Badge } from "@/components/ui/badge"
-
 export function SkillsSection() {
   const skillCategories = [
     {
       category: "Languages",
-      skills: ["Python", "Java", "Javascript", "C/C++", "HTML/CSS"],
+      skills: ["Python", "Java", "JavaScript", "C/C++", "HTML/CSS"],
     },
     {
       category: "Frontend",
-      skills: ["ReactJS", "TailwindCSS", "NextJS", "Redux", "TypeScript"],
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Redux"],
     },
     {
       category: "Backend",
-      skills: ["Django", "PostgreSQL", "NodeJS", "Flask", "REST API", "ExpressJS", "FastAPI", "SQL"],
+      skills: [
+        "Node.js",
+        "Express",
+        "Django",
+        "FastAPI",
+        "Flask",
+        "PostgreSQL",
+        "SQL",
+        "REST API",
+      ],
     },
     {
-      category: "Others",
-      skills: ["Git", "AWS", "Redis", "Docker", "Linux", "GraphQL"],
+      category: "Tools/Cloud",
+      skills: ["Git", "Linux", "Docker", "AWS", "Azure", "Redis", "GraphQL"],
     },
   ]
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div className="md:col-span-1">
-        <h2 className="text-2xl font-bold text-foreground">Skills</h2>
-      </div>
-      <div className="md:col-span-3">
-        <div className="space-y-4">
+    <section
+      id="skills"
+      className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60"
+    >
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
+        <div className="space-y-2">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+            Skills
+          </p>
+        </div>
+
+        <div className="divide-y divide-border/60">
           {skillCategories.map((category, index) => (
-            <div key={index} className="flex flex-col sm:flex-row gap-4">
-              <div className="w-24 flex-shrink-0">
-                <h3 className="font-medium text-foreground">{category.category}</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
+            <div key={index} className="py-3 first:pt-0 last:pb-0">
+              <p className="text-sm font-semibold text-foreground">
+                {category.category}
+              </p>
+              <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
                 {category.skills.map((skill, skillIndex) => (
-                  <Badge key={skillIndex} variant="secondary" className="text-sm">
+                  <span
+                    key={skillIndex}
+                    className="text-xs text-muted-foreground"
+                  >
                     {skill}
-                  </Badge>
+                  </span>
                 ))}
               </div>
             </div>
