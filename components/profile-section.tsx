@@ -1,5 +1,6 @@
 import { MapPin, Briefcase, Mail, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import Link from "next/link"
 
 export function ProfileSection() {
@@ -7,9 +8,11 @@ export function ProfileSection() {
     <section className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60">
       <div className="flex flex-col items-center gap-6 text-center">
         <div className="h-28 w-28 overflow-hidden rounded-2xl border border-border/50 bg-card/80 dark:border-border/60">
-          <img
+          <Image
             src="/Profile_pic.png"
             alt="Ramsundar Konety Govindarajan"
+            width={112}
+            height={112}
             className="h-full w-full object-cover"
           />
         </div>

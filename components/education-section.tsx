@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 export function EducationSection() {
   const educationEntries = [
@@ -42,9 +43,11 @@ export function EducationSection() {
             >
               <CardContent className="flex flex-col gap-2 px-0 py-2 md:flex-row md:items-start md:gap-3">
                 <div className="flex items-center gap-2 md:w-44">
-                  <img
+                  <Image
                     src={edu.logo || "/placeholder.svg"}
                     alt={`${edu.institution} logo`}
+                    width={36}
+                    height={36}
                     className="h-9 w-9 rounded-lg object-cover"
                   />
                   <div>

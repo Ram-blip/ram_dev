@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 export function ExperienceSection() {
   const experiences = [
@@ -57,9 +58,11 @@ export function ExperienceSection() {
             >
               <CardContent className="flex flex-col gap-3 px-0 py-4 md:flex-row md:items-start md:gap-5">
                 <div className="flex items-center gap-3 md:w-44">
-                  <img
+                  <Image
                     src={exp.logo || "/placeholder.svg"}
                     alt={`${exp.company} logo`}
+                    width={40}
+                    height={40}
                     className="h-10 w-10 rounded-lg object-cover"
                   />
                   <div>
