@@ -5,13 +5,13 @@ import Link from "next/link"
 export function ProjectsSection() {
   const projects = [
     {
-      title: "GitShare",
-      subtitle: "Easily share your private GitHub repositories",
+      title: "LOCKR",
+      subtitle: "Secure One Time Password Sharing APP",
       description:
-        "GitShare is a self-hosted platform to securely share private GitHub repositories. Built using NextJS, Django, PostgreSQL, and Docker for efficient deployment and scalability",
+        "LOCKR is a one-time secret and PDF sharing vault with expirations and view limits. Secrets are encrypted at rest, and decryption keys never persist on the server.",
       image: "/Project1.png",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com/gitshare",
+      githubUrl: "https://github.com/Ram-blip/lockr-backend",
+      liveUrl: "https://lockr-frontend.vercel.app/",
     },
     {
       title: "SafeStash",
