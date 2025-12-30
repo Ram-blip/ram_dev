@@ -8,44 +8,53 @@ export function ProjectsSection() {
       title: "LOCKR",
       subtitle: "Secure One Time Password Sharing APP",
       description:
-        "LOCKR is a one-time secret and PDF sharing vault with expirations and view limits. Secrets are encrypted at rest, and decryption keys never persist on the server.",
+        "LOCKR is a one-time secret and PDF sharing vault with expirations and view limits. Built with React, Node.js, Express, and PostgreSQL, secrets are encrypted at rest, and decryption keys never persist on the server.",
       image: "/Project1.png",
       githubUrl: "https://github.com/Ram-blip/lockr-backend",
       liveUrl: "https://lockr-frontend.vercel.app/",
     },
     {
-      title: "SafeStash",
-      subtitle: "Encode London Hackathon 2024 Bounty Winner",
+      title: "Spot2Tube",
+      subtitle: "Spotify-to-YouTube Playlist Transfer Platform",
       description:
-        "SafeStash is a hackathon-winning app for secure mobile money management using Stellar’s blockchain. Built with NextJS, Flask, and Supabase, it integrates Mobile Money APIs for seamless transactions.",
+        "Spot2Tube is a full-stack playlist migration app built with React, Flask, and PostgreSQL that transfers Spotify playlists to YouTube using OAuth 2.0 and an async worker pipeline for long-running jobs. It uses a multi-signal fuzzy matching engine (RapidFuzz + duration scoring + keyword penalties) to rank YouTube candidates per track and minimize manual cleanup.",
       image: "/Project2.png",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com/safestash",
+      githubUrl: "https://github.com/Ram-blip/Spot2tube-Backend",
+      liveUrl: "https://github.com/Ram-blip/Spot2tube-Backend",
     },
     {
-      title: "TaskFlow",
-      subtitle: "AI-powered project management platform",
+      title: "DuoStream",
+      subtitle: "Dual-Presenter Live Streaming Application",
       description:
-        "TaskFlow is an AI-driven project management tool that intelligently prioritizes and organizes tasks. Built using React, Node.js, MongoDB, and OpenAI API for smart and efficient workflow handling.",
+        "DuoStream is a dual-presenter live streaming app built with React, Node.js, Express, WebSockets, Mediasoup, and WebRTC, using role-based permissions (presenter, participant) to scale past 70 participants with low latency. It implements a Node.js/Express backend with Socket.IO for real-time signaling, Mediasoup server/session management, and RESTful APIs for room creation.",
       image: "/Project3.png",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com/taskflow",
+      githubUrl: "https://github.com/Ram-blip/Live_Streaming_Backend",
+      liveUrl: "https://github.com/Ram-blip/Live_Streaming_Backend",
     },
     {
-      title: "EcoTracker",
-      subtitle: "Carbon footprint monitoring mobile app",
+      title: "Minicov",
+      subtitle: "Test suite optimization tool",
       description:
-        "EcoTracker is a mobile app to track and analyze your carbon footprint in real time. Developed with React Native, Firebase, and Google Maps API for live environmental insights.",
+        "Built using C and Python 3, leveraging GCC compiler with coverage instrumentation (gcov) for code analysis. Containerized with Docker for reproducible execution across environments.",
       image: "/Project4.png",
-      githubUrl: "https://github.com",
+      githubUrl:
+        "https://github.com/Ram-blip/MiniCov-Optimized-Test-Suite-Generator",
     },
     {
-      title: "CryptoSentinel",
-      subtitle: "Blockchain security analysis tool",
+      title: "Pacman AI",
+      subtitle: "AI search algorithms in a maze world",
       description:
-        "CryptoSentinel is a blockchain security tool for analyzing and detecting smart contract vulnerabilities. Built with Python, FastAPI, PostgreSQL, and Web3.py for fast, secure contract auditing.",
+        "Pacman AI explores classic search in a maze world, finding paths to targets and efficiently collecting food. Implemented BFS, DFS, A*, and Uniform Cost Search to navigate complex layouts and solve Pacman scenarios.",
       image: "/Project5.png",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/Ram-blip/Pacman-AI",
+    },
+    {
+      title: "Escooter and Student Detection",
+      subtitle: "UCR object detection project",
+      description:
+        "Built a campus class safety project to detect scooters in classrooms and count students to flag potential proxy attendance. Collected and labeled data in Roboflow with polygon annotations, then trained a YOLOv8 model for detection.",
+      image: "/Project6.png",
+      githubUrl: "https://github.com/Ram-blip/Scooter-Student-Detection",
     },
   ]
 
