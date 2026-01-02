@@ -13,13 +13,13 @@ export default function BlogPage() {
 
         <Header />
 
-        <main className="mx-auto flex max-w-3xl flex-col gap-10 px-6 pb-24 pt-12">
-          <section className="rounded-3xl border border-border/60 bg-[linear-gradient(140deg,rgba(15,23,42,0.08),transparent_60%),linear-gradient(320deg,rgba(56,189,248,0.12),transparent_45%)] p-8 text-center">
+        <main className="mx-auto flex max-w-3xl flex-col gap-10 px-4 pb-20 pt-10 sm:px-6 sm:pb-24 sm:pt-12">
+          <section className="rounded-3xl border border-border/60 bg-[linear-gradient(140deg,rgba(15,23,42,0.08),transparent_60%),linear-gradient(320deg,rgba(56,189,248,0.12),transparent_45%)] p-6 text-center sm:p-8">
             <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-border/60 bg-card/80">
               <PenTool className="h-6 w-6 text-muted-foreground" />
             </div>
 
-            <h1 className="text-3xl font-semibold text-foreground">
+            <h1 className="text-2xl font-semibold text-foreground sm:text-3xl">
               Blog coming soon
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">

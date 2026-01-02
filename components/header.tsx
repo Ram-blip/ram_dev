@@ -18,7 +18,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/75 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-3 text-center sm:flex-row sm:justify-between sm:px-6 sm:py-4 sm:text-left">
         <Link
           href="/"
           className="text-sm font-semibold uppercase tracking-[0.25em] text-foreground"
@@ -26,7 +26,7 @@ export function Header() {
           Ram
         </Link>
 
-        <nav className="flex flex-wrap items-center gap-3 text-xs sm:gap-4 sm:text-sm">
+        <nav className="flex w-full flex-wrap items-center justify-center gap-3 text-xs sm:w-auto sm:justify-end sm:gap-4 sm:text-sm">
           <Link
             href={`${basePath}#about`}
             className="text-muted-foreground transition-colors hover:text-foreground"

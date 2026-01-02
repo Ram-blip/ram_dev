@@ -16,8 +16,8 @@ export default function Home() {
         <div className="pointer-events-none absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.16),transparent_70%)] blur-3xl" />
 
         <Header />
-        <main className="relative mx-auto max-w-6xl px-6 pb-16 pt-8">
-          <div className="space-y-12">
+        <main className="relative mx-auto max-w-6xl px-4 pb-12 pt-6 sm:px-6 sm:pb-16 sm:pt-8">
+          <div className="space-y-10 sm:space-y-12">
             <ProfileSection />
             <AboutSection />
             <ProjectsSection />

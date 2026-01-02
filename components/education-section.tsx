@@ -26,7 +26,7 @@ export function EducationSection() {
   return (
     <section
       id="education"
-      className="rounded-3xl border border-border/50 bg-card/70 p-4 md:p-7 dark:border-border/60"
+      className="rounded-3xl border border-border/50 bg-card/70 p-4 sm:p-5 md:p-7 dark:border-border/60"
     >
       <div className="grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
         <div className="space-y-2">

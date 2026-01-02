@@ -61,7 +61,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60"
+      className="rounded-3xl border border-border/50 bg-card/70 p-5 sm:p-6 md:p-10 dark:border-border/60"
     >
       <div className="space-y-6">
         <div className="space-y-2">
@@ -88,9 +88,9 @@ export function ProjectsSection() {
                     {project.description}
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center gap-2 md:justify-end">
+                <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap md:justify-end">
                   {project.liveUrl && (
-                    <Button asChild size="sm">
+                    <Button asChild size="sm" className="w-full sm:w-auto">
                       <Link
                         href={project.liveUrl}
                         target="_blank"
@@ -100,7 +100,12 @@ export function ProjectsSection() {
                       </Link>
                     </Button>
                   )}
-                  <Button asChild size="sm" variant="secondary">
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="secondary"
+                    className="w-full sm:w-auto"
+                  >
                     <Link
                       href={project.githubUrl}
                       target="_blank"

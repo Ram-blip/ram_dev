@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function ProfileSection() {
   return (
-    <section className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60">
+    <section className="rounded-3xl border border-border/50 bg-card/70 p-5 sm:p-6 md:p-10 dark:border-border/60">
       <div className="flex flex-col items-center gap-6 text-center">
         <div className="h-28 w-28 overflow-hidden rounded-2xl border border-border/50 bg-card/80 dark:border-border/60">
           <Image
@@ -18,7 +18,7 @@ export function ProfileSection() {
         </div>
 
         <div className="space-y-2">
-          <h1 className="text-3xl font-semibold md:text-4xl">
+          <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl">
             Ramsundar Konety Govindarajan
           </h1>
           <div className="flex flex-wrap justify-center gap-3 text-xs text-muted-foreground">
@@ -34,13 +34,17 @@ export function ProfileSection() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <Button asChild>
-            <Link href="/Ram_Resume_December.pdf" target="_blank">
+          <Button asChild className="w-full sm:w-auto">
+            <Link
+              href="https://drive.google.com/file/d/1eYYNlb71HGiU2NvHnAfa6zftigtBiFE9/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View Resume
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild className="w-full sm:w-auto">
             <Link href="mailto:ramsundar.konety@gmail.com">
               <Mail className="h-4 w-4" />
               Email Me

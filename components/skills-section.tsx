@@ -30,7 +30,7 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="rounded-3xl border border-border/50 bg-card/70 p-6 md:p-10 dark:border-border/60"
+      className="rounded-3xl border border-border/50 bg-card/70 p-5 sm:p-6 md:p-10 dark:border-border/60"
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
         <div className="space-y-2">
