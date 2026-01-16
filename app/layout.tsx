@@ -41,11 +41,15 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: "Ram | Software Developer",
   description:
-    "Portfolio of Ramsundar Konety Govindarajan, Computer Science and Electronics student at University of Bristol",
+    "Portfolio of Ramsundar Konety Govindarajan, Building what I wish existed",
   generator: "v0.app",
   icons: {
-    icon: [{ url: "/favicon.svg" }],
-    apple: [{ url: "/favicon.svg" }],
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
 }
