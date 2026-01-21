@@ -28,7 +28,7 @@ export function ProfileSection() {
             </span>
             <span className="inline-flex items-center gap-2">
               <MapPin className="h-3.5 w-3.5" />
-              Mountain View, CA
+              United States
             </span>
           </div>
         </div>
